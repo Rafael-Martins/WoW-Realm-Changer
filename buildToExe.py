@@ -14,7 +14,9 @@ executables = [
     Executable(
     'main.py',
     base=base,
-    icon="icon/icon.ico"),
+    icon="icon/icon.ico",
+    targetName="WoW-Realm-Changer.exe"
+    ),
 
 ]
 
@@ -23,6 +25,7 @@ options = {
         'include_files':[
             os.path.join(PYTHON_INSTALL_DIR, 'DLLs', 'tk86t.dll'),
             os.path.join(PYTHON_INSTALL_DIR, 'DLLs', 'tcl86t.dll'),
+            "icon/"
          ],
     },
 }
