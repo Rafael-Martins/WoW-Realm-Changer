@@ -12,27 +12,27 @@ if sys.platform == 'win32':
 
 executables = [
     Executable(
-    'main.py',
-    base=base,
-    icon="icon/icon.ico",
-    targetName="WoW-Realm-Changer.exe"
+        'main.py',
+        base=base,
+        icon="icon/icon.ico",
+        targetName="WoW-Realm-Changer.exe"
     ),
-
 ]
 
 options = {
     'build_exe': {
-        'include_files':[
+        'include_files': [
             os.path.join(PYTHON_INSTALL_DIR, 'DLLs', 'tk86t.dll'),
             os.path.join(PYTHON_INSTALL_DIR, 'DLLs', 'tcl86t.dll'),
             "icon/"
-         ],
+        ],
     },
 }
 
-setup(name='simple_Tkinter',
-      version='0.1',
-      description='Sample cx_Freeze Tkinter script',
-      executables=executables,
-      options = options
+setup(
+    name='simple_Tkinter',
+    version='0.1',
+    description='Sample cx_Freeze Tkinter script',
+    executables=executables,
+    options=options
 )
